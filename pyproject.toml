@@ -2,14 +2,14 @@
 requires = [ "setuptools" ]
 
 [project]
-name = "taipy_gui_ext_library"
-version = "1.0.0"
-authors = [ { name = "You Name", email = "your@email.domain" } ]
-description = "A Taipy GUI extension library."
+name = "taipy_konva"
+version = "0.0.1"
+authors = [ { name = "Fabien Lelaquais", email = "fabien.lelaquais@taipy.io" } ]
+description = "A Taipy GUI extension library that provides Konva functionalities."
 readme = { file = "README.md", content-type = "text/markdown" }
-requires-python = ">=3.8"
-keywords = [ "taipy" ]
-license = { text = "Apache License 2.0" }
+requires-python = ">=3.9"
+keywords = [ "taipy", "konva" ]
+license = {text = "Apache License 2.0"}
 classifiers = [
     "Intended Audience :: Developers",
     # "License :: OSI Approved :: Apache Software License",
@@ -19,5 +19,6 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
-dependencies = [ "taipy-gui>=2.2" ]
+dependencies = [ "taipy-gui>=4.0" ]

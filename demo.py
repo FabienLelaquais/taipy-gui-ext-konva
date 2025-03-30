@@ -1,18 +1,20 @@
 from taipy.gui import Gui
-# Import extension library fromt the package directory name
-# from <package_dir_name> import Library
-from taipy_gui_ext_library import Library
+from taipy_konva import Library as KonvaLibrary
+from taipy_konva import Layer, Text, Rect
 
-# The page contains the element from the custom extension library:
-# the full name of the element type is
-#     <extension_library_name>.<element_name>
+layer = Layer()
+layer.add(Text("some text", fill="yellow"))
+layer.add(Rect(x=20, y=20, width=50, height=50, fill="red"))
+
+layers = [layer]
+
 page = """
-# Extension library
+# Konva demo
 
-Custom element: <|My text content|library.element|>
+<|{layers}|konva.stage|>
 """
 gui = Gui(page=page)
-gui.add_library(Library())
+gui.add_library(KonvaLibrary())
 if __name__ == "__main__":
     # Run main app
-    gui.run()
+    gui.run(run_browser=False)

@@ -23,7 +23,7 @@ module.exports = (_env, options) => {
       // filename: the filename of the JavaScript bundle that gets generated.
       // The 'get_scripts()' method of the ElementLibrary subclass must return
       // the full path to this file.
-      filename: "library.js",
+      filename: "taipy-konva.js",
       path: path.resolve(__dirname, "dist"),
       library: {
         // name: if ElementLibrary.get_js_module_name() is not overloaded (which
@@ -32,7 +32,7 @@ module.exports = (_env, options) => {
         // In this template, because get_name() returns "library", we
         // must use the string "Library" with a capital 'L'.
         // See the ElementLibrary.get_js_module_name() documentation for details.
-        name: "Library",
+        name: "Konva",
         type: "umd"
       },
       publicPath: "/",
@@ -62,7 +62,7 @@ module.exports = (_env, options) => {
       new webpack.DllReferencePlugin({
         manifest: path.resolve(
           __dirname,
-          `${process.env.TAIPY_GUI_DIR}/taipy/gui/webapp/taipy-gui-deps-manifest.json`
+          `${process.env.TAIPY_DIR}/taipy/gui/webapp/taipy-gui-deps-manifest.json`
         ),
         name: "TaipyGuiDependencies"
       }),
