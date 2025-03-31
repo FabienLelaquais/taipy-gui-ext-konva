@@ -21,8 +21,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "taipy-gui": "file:../../../../taipy/taipy/gui/webapp"
+    "react": "^18.2.0"
   },
   "scripts": {
     "postinstall": "node scripts/install.js",
